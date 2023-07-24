@@ -1,0 +1,239 @@
+.formContainer {
+    display: none;
+    width: 686px;
+    padding: 8px;
+    z-index: 1003;
+    position: absolute;
+    top: 70px;
+    left: 21%;
+    right: 21%;
+    background-color: #FFFFFF;
+    border-radius: 10px;
+}
+
+.disabledGround {
+    display: none;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #000000;
+    opacity: 0.8;
+    z-index: 999;
+}
+
+.closeIcon {
+    position: absolute;
+    top: -16px;
+    right: -16px;
+    align-items: center;
+    display: flex;
+    width: 30px;
+    height: 30px;
+    background: linear-gradient(to bottom, #24bf0a, #0e4a03);
+    border-radius: 50%;
+    box-shadow: 0px 5px 3px #292828;
+    cursor: pointer;
+}
+
+.lineOne, .lineTwo {
+    width: 95%;
+    color: #FFFFFF;
+    border-bottom: 3px solid #FFFFFF;
+}
+
+.lineOne {
+    transform: rotate(45deg) translate(6px, -5px);
+}
+
+.lineTwo {
+    transform: rotate(-45deg) translate(-5px, -4px);
+}
+
+.registerTitle {
+    margin-top: 24px;
+}
+
+.inputContainer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.inputWrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 49%;
+    margin-top: 24px;
+    text-align: left;
+}
+
+.inputWrapper label {
+    margin-bottom: 4px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.inputWrapper input {
+    border-radius: 5px;
+    border: 1px solid #000000;
+}
+
+.passwordIcon {
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    right: 16px;
+    top: 32px;
+}
+
+.inputField {
+    padding: 5px;
+}
+
+.adTextContainer {
+    margin: -8px -8px 0 -8px;
+    background-color: #eaeaea;
+    border-radius: 10px 10px 0 0;
+}
+
+.adText {
+    width: 100%;
+    padding: 20px;
+    text-align: left;
+}
+
+.mainText {
+    font-size: 20px;
+    line-height: 1;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #000000;
+}
+
+.secondaryText {
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #149202;
+}
+
+.bigAdText {
+    line-height: 1;
+    margin-bottom: 8px;
+}
+
+.smallAdText not:last-of-type {
+    margin-top: 10px;
+}
+
+.smallAdText span {
+    font-size: 12px;
+}
+
+.smallAdText {
+    line-height: 0.8;
+}
+
+.star {
+    margin-left: 4px;
+    color: #ff0000;
+}
+
+.checkboxGroup {
+    margin-top: 32px;
+}
+
+.checkboxContainer {
+    margin-top: 4px;
+    text-align: left;
+    font-size: 14px;
+}
+
+.registerBtn {
+    width: 150px;
+    height: 40px;
+    margin-top: 24px;
+    margin-bottom: 24px;
+    color: #FFFFFF;
+    font-weight: bold;
+    font-size: 14px;
+    background: linear-gradient(to bottom, #ff5a15, #862600);
+    border-radius: 5px;
+    border: none;
+    box-shadow: 0px 5px 3px #484848;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.arrow {
+    font-size: 18px;
+    margin-left: 8px;
+}
+
+.haveAccountContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 32px;
+}
+
+.haveAccountContainer span {
+    margin-right: 8px;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.haveAccountContainer a {
+    font-weight: bold;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #127a02;
+}
+
+.visiblePopup {
+    display: block;
+}
+
+.invisiblePopup {
+    display: none;
+}
+
+@media only screen and (max-width: 1024px) {
+    .formContainer {
+        width: 480px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .formContainer {
+        width: 290px;
+        top: 60px;
+    }
+
+    .inputContainer {
+        flex-direction: column;
+    }
+
+    .inputWrapper {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .formContainer {
+        top: 21px;
+        left: 16px;
+        width: 90%;
+    }
+
+    .menuContainer {
+        top: 39px;
+        left: -10px;
+    }
+
+    .registerBtn {
+        width: 100%;
+    }
+}

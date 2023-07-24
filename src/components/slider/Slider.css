@@ -1,0 +1,432 @@
+.css-slider-wrapper {
+    display: block;
+    background: #FFF;
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 59px;
+    bottom: 0;
+    height: 500px;
+}
+
+.slider {
+    width: 100%;
+    height: 100%;
+    background: red;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 1;
+    z-index: 0;
+    display: flex;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    flex-direction: row;
+    flex-wrap: wrap;
+    -webkit-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    -webkit-transition: -webkit-transform 1600ms;
+    transition: -webkit-transform 1600ms, transform 1600ms;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+}
+
+.slide1 {
+    background: url("../../icons/collage_background.svg") no-repeat;
+    background-size: cover;
+    left: 0;
+}
+
+.sliderText1 {
+    position: absolute;
+    left: 12%;
+    top: 96px;
+    width: 480px;
+    height: 235px;
+    background: url("../../icons/slide_text.svg") no-repeat;
+}
+
+.sliderClients1 {
+    position: absolute;
+    left: -270px;
+    width: 2000px;
+    height: 500px;
+    background-size: contain !important;
+    background: url("../../icons/clients.svg") no-repeat;
+}
+
+.slide2 {
+    background: #009788;
+    left: 100%
+}
+
+.slide3 {
+    background: #ff5608;
+    left: 200%
+}
+
+.slide4 {
+    background: #607d8d;
+    left: 300%;
+}
+
+.slide5 {
+    background: #be11d9;
+    left: 400%;
+}
+
+.slide6 {
+    background: #12cb19;
+    left: 500%;
+}
+
+.slider>div {
+    text-align: center;
+}
+
+.slider h2 {
+    color: #FFF;
+    font-weight: 900;
+    text-transform: uppercase;
+    font-size: 45px;
+    line-height: 120%;
+    opacity: 0;
+    -webkit-transform: translateX(500px);
+    transform: translateX(500px);
+}
+
+.slider .button {
+    color: #FFF;
+    padding: 5px 30px;
+    background: rgba(255, 255, 255, 0.3);
+    text-decoration: none;
+    opacity: 0;
+    font-size: 15px;
+    line-height: 30px;
+    display: inline-block;
+    -webkit-transform: translateX(-500px);
+    transform: translateX(-500px);
+}
+
+.slider h2,
+.slider .button {
+    -webkit-transition: opacity 800ms, -webkit-transform 800ms;
+    transition: transform 800ms, opacity 800ms;
+    -webkit-transition-delay: 1s;
+    /* Safari */
+    transition-delay: 1s;
+}
+
+
+.control {
+    position: absolute;
+    top: 50%;
+    width: 70px;
+    height: 70px;
+    margin-top: -35px;
+    z-index: 55;
+}
+
+.control label {
+    z-index: 0;
+    display: none;
+    text-align: center;
+    line-height: 50px;
+    font-size: 50px;
+    color: #FFF;
+    cursor: pointer;
+}
+
+.control label:hover {
+    opacity: 0.5;
+}
+
+.next {
+    right: 1%;
+}
+
+.previous {
+    left: 1%;
+}
+
+.slider-pagination {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    left: 45%;
+    text-align: center;
+    z-index: 1000;
+}
+
+.slider-pagination label {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    display: inline-block;
+    background: #FFFFFF;
+    margin: 0 6px;
+    cursor: pointer;
+}
+
+.slide-radio1:checked~.previous .numb1,
+.slide-radio1:checked~.next .numb2,
+.slide-radio2:checked~.next .numb3,
+.slide-radio3:checked~.next .numb4,
+.slide-radio4:checked~.next .numb5,
+.slide-radio5:checked~.next .numb6,
+.slide-radio2:checked~.previous .numb1,
+.slide-radio3:checked~.previous .numb2,
+.slide-radio4:checked~.previous .numb3,
+.slide-radio5:checked~.previous .numb4,
+.slide-radio6:checked~.previous .numb5,
+.slide-radio6:checked~.next .numb6 {
+    display: block;
+    z-index: 1
+}
+
+.slide-radio1:checked~.slider-pagination .page1,
+.slide-radio2:checked~.slider-pagination .page2,
+.slide-radio3:checked~.slider-pagination .page3,
+.slide-radio4:checked~.slider-pagination .page4,
+.slide-radio5:checked~.slider-pagination .page5,
+.slide-radio6:checked~.slider-pagination .page6 {
+    background: #FAD505;
+    width: 15px;
+    height: 15px;
+    bottom: 15px;
+}
+
+.slide-radio1:checked~.slider {
+    -webkit-transform: translateX(0%);
+    transform: translateX(0%);
+}
+
+.slide-radio2:checked~.slider {
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+}
+
+.slide-radio3:checked~.slider {
+    -webkit-transform: translateX(-200%);
+    transform: translateX(-200%);
+}
+
+.slide-radio4:checked~.slider {
+    -webkit-transform: translateX(-300%);
+    transform: translateX(-300%);
+}
+
+.slide-radio5:checked~.slider {
+    -webkit-transform: translateX(-400%);
+    transform: translateX(-400%);
+}
+
+.slide-radio6:checked~.slider {
+    -webkit-transform: translateX(-500%);
+    transform: translateX(-500%);
+}
+
+.slide-radio1:checked~.slide1 h2,
+.slide-radio2:checked~.slide2 h2,
+.slide-radio3:checked~.slide3 h2,
+.slide-radio4:checked~.slide4 h2,
+.slide-radio5:checked~.slide5 h2,
+.slide-radio6:checked~.slide6 h2,
+.slide-radio1:checked~.slide1 .button,
+.slide-radio2:checked~.slide2 .button,
+.slide-radio3:checked~.slide3 .button,
+.slide-radio4:checked~.slide4 .button,
+.slide-radio5:checked~.slide5 .button,
+.slide-radio6:checked~.slide6 .button {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1
+}
+
+.rightArrow {
+    width: 70px;
+    height: 70px;
+    background: url("../../icons/btnSlideRight.svg") no-repeat;
+}
+
+.leftArrow {
+    width: 70px;
+    height: 70px;
+    background: url("../../icons/btnSlideLeft.svg") no-repeat;
+}
+
+.mobileTextContainer1 {
+    display: none;
+    position: absolute;
+    text-align: left;
+}
+
+.highlightedText {
+    font-family: Roboto, sans-serif;
+    font-weight: bold;
+    font-size: 22px;
+    text-transform: uppercase;
+    color: #FFD700;
+}
+
+.mobileUppercaseText {
+    font-family: Barlow;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 22px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    letter-spacing: -0.3px;
+}
+
+.mobileSmallText {
+    font-family: Barlow;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 16px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    letter-spacing: -0.3px;
+}
+
+.mobileTextWrapper {
+    text-align: left;
+}
+
+.mobileRegisterBtn {
+    display: none;
+    width: 150px;
+    height: 40px;
+    color: #FFFFFF;
+    font-weight: bold;
+    font-size: 14px;
+    background: linear-gradient(to bottom, #ff5a15, #862600);
+    border-radius: 5px;
+    border: none;
+    box-shadow: 0px 5px 3px #484848;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 1024px) {
+    .sliderClients1 {
+        left: -102px;
+        top: 0;
+        width: 1500px;
+        height: 300px;
+    }
+
+    .sliderText1 {
+        display: none;
+    }
+
+    .mobileTextContainer1 {
+        display: block;
+        top: 32px;
+        left: 16px;
+        padding: 0;
+    }
+
+    .leftArrow, .rightArrow {
+        width: 30px;
+        height: 30px;
+        background-size: contain;
+    }
+
+    .control {
+        width: 30px;
+        height: 30px;
+        margin-top: -15px;
+    }
+
+    .css-slider-wrapper {
+        height: 300px;
+    }
+
+    .slider-pagination {
+        left: 43%;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .slider h2 {
+        font-size: 20px;
+    }
+    .slider>div {
+        padding: 0 2%
+    }
+    .control label {
+        font-size: 35px;
+    }
+    .slider .button {
+        padding: 0 15px;
+    }
+
+    .highlightedText {
+        font-size: 18px;
+    }
+
+    .mobileUppercaseText {
+        font-size: 18px;
+    }
+
+    .mobileSmallText {
+        font-size: 14px;
+    }
+
+    .slider-pagination {
+        left: 35%;
+    }
+
+    .mobileTextContainer1 {
+        top: 32px;
+        left: 16px;
+        padding: 0;
+    }
+
+    .sliderClients1 {
+        left: -245px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .slider-pagination {
+        left: 30%;
+    }
+
+    .css-slider-wrapper {
+        top: 48px;
+        height: 250px;
+    }
+
+    .mobileTextContainer1 {
+        top: 32px;
+        left: 16px;
+        padding: 0;
+    }
+
+    .mobileRegisterBtn {
+        display: block;
+        position: absolute;
+        left: 16px;
+        bottom: 60px;
+        cursor: pointer;
+    }
+
+    .mobileTextWrapper {
+        letter-spacing: -0.6px;
+    }
+
+    .sliderClients1 {
+        left: -314px;
+        top: 0;
+        width: 950px;
+        height: 250px;
+    }
+}

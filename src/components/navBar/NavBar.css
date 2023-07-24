@@ -1,0 +1,26 @@
+
+.navMenuContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 40%;
+}
+
+.menuItem {
+    color: #FFFFFF;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 14px;
+    font-family: Roboto, sans-serif;
+    text-decoration: none;
+}
+
+.menuItem:hover {
+    color: #FBD703;
+}
+
+@media only screen and (max-width: 1024px) {
+    .navMenuContainer {
+        display: none;
+    }
+}

@@ -1,0 +1,108 @@
+.headerContainer {
+    width: 100%;
+    height: 60px;
+    padding: 0 10px;
+    background: linear-gradient(to bottom, #149202, #1D4617);
+}
+
+.headerWrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 1023px;
+    height: 100%;
+}
+
+.registrationContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 48%;
+}
+
+.casinoLogo {
+    margin-top: 5px;
+}
+
+.registrationWrapper {
+    display: flex;
+    align-items: center;
+}
+
+.casinoLogo {
+
+}
+
+.languageIcon {
+    margin-left: 16px;
+    background: url("../../icons/flag.svg") no-repeat;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+}
+
+.burgerBtnContainer {
+    position: relative;
+}
+
+.burgerMenuBtn {
+    display: none;
+    width: 30px;
+    height: 30px;
+    padding: 4px;
+    background: linear-gradient(to bottom, #24bf0a, #0e4a03);
+    border-radius: 7px;
+    box-shadow: 0px 5px 3px #292828;
+    cursor: pointer;
+
+}
+
+.line {
+    border-bottom: 3px solid #FFFFFF;
+    margin-top: 4px;
+}
+
+.firstLine, .secondLine, .thirdLine {
+    width: 80%;
+}
+
+@media only screen and (max-width: 1024px) {
+    .languageIcon {
+        display: none;
+    }
+
+    .burgerMenuBtn {
+        display: block;
+    }
+
+    .registrationContainer {
+        width: 85%;
+    }
+
+    .firstLine {
+        transform: rotate(45deg) translate(7px, 4px);
+    }
+
+    .secondLine {
+        display: none;
+    }
+
+    .thirdLine {
+        transform: rotate(-45deg) translate(1px, 2px);
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .headerContainer {
+        height: 48px;
+    }
+
+    .casinoLogo {
+        width: 100px;
+    }
+
+    .registrationContainer {
+        width: 89%;
+    }
+}
